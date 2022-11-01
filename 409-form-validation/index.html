@@ -1,0 +1,55 @@
+<html>
+<body>
+<script type="text/javascript">  
+function validate(){  
+var name=document.f1.name.value;  
+var passwordlength=document.f1.password.value.length;  
+var emaillength=document.f1.password.value.length;  
+var status=false;  
+if(name==""){  
+document.getElementById("namelocation").innerHTML=  
+"name must be alphanumeric and contain 3 - 16 character";  
+status=false;
+}else{  
+document.getElementById("namelocation").innerHTML="";  
+status=true;
+}  
+  
+if(passwordlength<6){  
+document.getElementById("passwordlocation").innerHTML=  
+"Password must be alphanumeric(@,_, and - are also allowed) and between 6 - 20 characters";  
+status=false; 
+}else{  
+document.getElementById("passwordlocation").innerHTML="";  
+}    
+return status;  
+
+if(Emaillength<6){  
+document.getElementById("Emaillocation").innerHTML=  
+"Email must be a valid address,e.g.example@example.com";  
+status=false; 
+}else{  
+document.getElementById("Emaillocation").innerHTML="";  
+}    
+return status;  
+} 
+</script>  
+<form name="f1" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validate()">  
+<table>
+<tr><td>Frist Name:</td><td><input type="text" name="name"/>  
+<span id="namelocation" style="color:#f38b29d7"></span></td></tr> 
+
+<tr><td>Last Name:</td><td><input type="text" name="name"/>  
+<span id="namelocation" style="color:#f38b29d7"></span></td></tr> 
+
+<tr><td>Email:</td><td><input type="text" name="name"/>  
+    <span id="Emaillocation" style="color:#f38b29d7"></span></td></tr>
+
+<tr><td>Password:</td><td><input type="password" name="password"/>  
+<span id="passwordlocation" style="color:#f38b29d7"></span></td></tr>
+
+<tr><td colspan="2"><input type="submit" value="submit"/></td></tr>
+</table>
+</form>  
+</body>
+</html>
